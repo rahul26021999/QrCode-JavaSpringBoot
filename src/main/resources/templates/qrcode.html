@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="text-align: center;">Qr Code Example using Java Spring boot</h1>
+
+<div style="width:40%;display: inline-block">
+    <h3>Qr Code using Byte Array</h3>
+    <p>Data : <span th:text="${medium}"></span></p>
+    <img th:src="${'data:image/png;base64,' + qrcode}" alt="" height="250" width="250">
+</div>
+
+<div style="width:40%;display: inline-block;">
+    <h3>Qr Code as an Image</h3>
+    <p>Data : <span th:text="${github}"></span></p>
+    <img th:src="@{/img/QRCode.png}" height="250" width="250"/>
+</div>
+<p>Note : You can Change the background and foreground color of the QR code in QRCodeGenerator Class</p>
+
+</body>
+</html>
